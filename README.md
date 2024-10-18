@@ -71,6 +71,20 @@ git config --global url."https://${GITHUB_PERSONAL_ACCESS_TOKEN}@github.com/".in
 
 This can be done for other git providers as well, following the same pattern
 
+## Build docker image
+
+If you want to build the docker image locally (you don't have to):
+
+```shell
+docker build -t goproxy/goproxy:latest .
+```
+
+or if you are running on arm64
+
+```shell
+docker build --build-arg ARCH=arm64 -t goproxy/goproxy:latest .
+```
+
 ## Use docker image
 
 ```shell
